@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div#head{
+		perspective: 500px;
+	}
+	div#sub {
+		width: 300px;
+		height: 100px;
+		background-color: yellow;
+		border: 1px solid black;
+		position: absolute;
+		transform: translate(250px,50px) rotateX(45deg) scale(2,2) skewX(20deg);
+	}
+	
+	div#tran{
+		width: 100px;
+		height: 100px;
+		background: red;
+		transform: translate(10px,320px);
+		transition: width 2s, opacity 3s, background 3s, height 2s;
+		
+	}
+	
+	div#tran:hover{
+		width: 500px;
+		opacity: 0.3;
+		background: green;
+		height: 500px;
+	}
+	
+	@keyframes anima-test {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px; border-radius:50px;}
+    50%  {background-color:blue; left:200px; top:200px; border-radius:0px;}
+    75%  {background-color:green; left:0px; top:200px; border-radius:50px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+
+	
+	div#anima{
+		width: 100px;
+		height: 100px;
+		background: pink;
+		position: relative;
+		transform: translate(10px,370px);
+		animation-name: anima-test;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+	}
+	
+	@keyframes cir-test {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px; border-radius:50px;}
+    50%  {background-color:blue; left:200px; top:200px; border-radius:0px;}
+    75%  {background-color:green; left:0px; top:200px; border-radius:50px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+
+	
+	div#cir-test{
+		width: 100px;
+		height: 100px;
+		background: pink;
+		position: relative;
+		transform: translate(10px,370px);
+		animation-name: cir-test;
+		
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+	}
+</style>
+</head>
+<body>
+	<div id="head">
+		<div id="sub">
+			This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+		</div>
+	</div>
+	<div id="tran">
+	</div>
+	
+	<div id="anima">
+	</div>
+	
+	<div id="cir-test">
+	</div>
+</body>
+</html>
